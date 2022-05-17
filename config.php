@@ -12,4 +12,7 @@ $usuario = 'root';
 $senha = '';
 $banco = 'financeiro';
 
- ?>
+//VARIAVEIS GLOBAIS
+$nivel_minimo_estoque = 10;  // a partir de 10 produtos ele vai colocar o produto em alerta com estoque baixo.
+
+?>

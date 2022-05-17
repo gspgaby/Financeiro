@@ -17,8 +17,6 @@ require_once($pagina."/campos.php");
 	</div>
 </small>
 
-
-
 <!-- Modal -->
 <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -58,18 +56,11 @@ require_once($pagina."/campos.php");
 								$nome_item = $res[$i]['nivel'];
 								?>
 								<option value="<?php echo $nome_item ?>"><?php echo $nome_item ?></option>
-
 							<?php } ?>
-
-
 						</select>
 					</div>	
-
 					<small><div id="mensagem" align="center"></div></small>
-
 					<input type="hidden" class="form-control" name="id"  id="id">
-
-
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-fechar">Fechar</button>
@@ -79,9 +70,6 @@ require_once($pagina."/campos.php");
 		</div>
 	</div>
 </div>
-
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -93,14 +81,9 @@ require_once($pagina."/campos.php");
 			</div>
 			<form id="form-excluir" method="post">
 				<div class="modal-body">
-
 					Deseja Realmente excluir este Registro: <span id="nome-excluido"></span>?
-
 					<small><div id="mensagem-excluir" align="center"></div></small>
-
 					<input type="hidden" class="form-control" name="id-excluir"  id="id-excluir">
-
-
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-fechar-excluir">Fechar</button>
@@ -111,6 +94,29 @@ require_once($pagina."/campos.php");
 	</div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="modalDados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Usuário <span id="campo1"></span></h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+				<div class="modal-body">
+					<small>
+						<span><b><?php echo $campo2 ?>:</b> <span id="campo2"></span></span>
+						</span>	
+						<hr style="margin:6px;">
+						<span><b><?php echo $campo3 ?>:</b> <span id="campo3" ></span>
+						</span>	
+						<hr style="margin:6px;">
+						<span><b><?php echo $campo4 ?>:</b> <span id="campo4"></span></span>
+						</span>	
+					</small>
+				</div>				
+		</div>
+	</div>
+</div>
 
 <script type="text/javascript">var pag = "<?=$pagina?>"</script>
 <script src="../js/ajax.js"></script>

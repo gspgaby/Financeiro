@@ -21,7 +21,8 @@ if($total_reg > 0 and $id_reg != $id){
 
 if($id == ""){
 	$query = $pdo->prepare("INSERT INTO $pagina set nome = :campo1, email = :campo2, senha = :campo3, nivel = :campo4");
-}else{
+}
+else{
 	$query = $pdo->prepare("UPDATE $pagina set nome = :campo1, email = :campo2, senha = :campo3, nivel = :campo4 WHERE id = '$id'");
 }
 
@@ -30,7 +31,5 @@ $query->bindValue(":campo2", "$cp2");
 $query->bindValue(":campo3", "$cp3");
 $query->bindValue(":campo4", "$cp4");
 $query->execute();
-
 echo 'Salvo com Sucesso';
-
- ?>
+?>

@@ -16,7 +16,4 @@ if($total_reg == 0){
 }else{
 	echo 'Este nível possui usuários associados a ele, primeiro exclua estes usuários e depois exclua o nível!';
 }
-
-
-
- ?>
+?>

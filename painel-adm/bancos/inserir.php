@@ -2,9 +2,7 @@
 require_once("../../conexao.php");
 require_once("campos.php");
 
-
 $cp1 = $_POST[$campo1];
-
 $id = @$_POST['id'];
 
 //VALIDAR CAMPO
@@ -19,7 +17,8 @@ if($total_reg > 0 and $id_reg != $id){
 
 if($id == ""){
 	$query = $pdo->prepare("INSERT INTO $pagina set nome = :campo1");
-}else{
+}
+else{
 	$query = $pdo->prepare("UPDATE $pagina set nome = :campo1 WHERE id = '$id'");
 }
 
@@ -27,5 +26,4 @@ $query->bindValue(":campo1", "$cp1");
 $query->execute();
 
 echo 'Salvo com Sucesso';
-
- ?>
+?>

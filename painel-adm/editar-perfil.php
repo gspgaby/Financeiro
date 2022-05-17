@@ -5,7 +5,6 @@ $email = $_POST['email-usuario'];
 $senha = $_POST['senha-usuario'];
 $id = $_POST['id-usuario'];
 
-
 //VALIDAR EMAIL
 $query = $pdo->query("SELECT * from usuarios where email = '$email'");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -21,7 +20,5 @@ $query->bindValue(":email", "$email");
 $query->bindValue(":senha", "$senha");
 $query->bindValue(":nome", "$nome");
 $query->execute();
-
 echo 'Salvo com Sucesso';
-
- ?>
+?>
